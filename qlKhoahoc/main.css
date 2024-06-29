@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.Header_Page {
+    display: flex;
+    /* height: 150px; */
+    justify-content: center;
+    border-bottom: 1px solid #eff0ef;
+    box-shadow: 1px 6px 11px 1px #eff0ef;
+    -webkit-box-shadow: 1px 6px 11px 1px #eff0ef;
+    -moz-box-shadow: 1px 6px 11px 1px #eff0ef;
+    border-radius: 5px;
+}
+
+.title_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title_top img {
+    width: 22%;
+    height: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    /* border: 2px solid #eff0ef;
+    border-radius: 5px; */
+    /* z-index: 1; */
+}
+
+.title_top .title_underlogo {
+    z-index: 1;
+    position: absolute;
+    padding-top: 90px;
+    padding-left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #bb2326;
+}
+
+.Header_Page .title_mid {
+    display: flex;
+    padding-top: 30px;
+    color: #bb2326;
+}
+
+.Header_Page .title_bot {
+
+    padding-right: 20px;
+    padding-top: 37px;
+
+}
+
+
+.Header_Page .title_bot button {
+    width: 100px;
+    height: 35px;
+    background-color: #dd3544;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.addTable {
+    display: flex;
+
+}
+
+.addTable span {
+    width: 100px;
+}

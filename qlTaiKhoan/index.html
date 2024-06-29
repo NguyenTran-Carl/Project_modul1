@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tài Khoản</title>
+
+
+</head>
+
+<body>
+    <!-- Trang quản trị 
+Header của trang -->
+    <div class="Header_Page">
+        <div class="title_top">
+            <img class="logo_rikkei" src="https://rikkei.edu.vn/wp-content/uploads/2024/01/logo-rikkei2.png"
+                alt="rikkeiedu">
+
+            <b class="title_underlogo">Để nông dân biết Code</b>
+
+            <div class="title_mid">
+                <h1>HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI
+                </h1>
+            </div>
+            <!-- Thêm nút đăng xuất ra màn hình đăng nhập -->
+            <div class="title_bot">
+                <span class="user_box"></span>
+                <button class="logout" onclick="logout()">Log Out</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Account</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody id="user_box">
+              
+            </tbody>
+        </table>
+
+
+        <link rel="stylesheet" href="main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="main.js"></script>
+    </div>
+</body>
+
+</html>

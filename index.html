@@ -1,11 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Quản Lý</title>
+  <link rel="stylesheet" href="main.css">
+  <script>
+    function checkAuthen() {
+      if (!localStorage.getItem("userLogin")) {
+        alert(" Vui Lòng Đăng Nhập !")
+        window.location.href = "/"
+
+      }
+    }
+    checkAuthen()
+  </script>
 </head>
+
 <body>
-    
+
+
+  </head>
+  <!-- Trang quản trị 
+Header của trang -->
+  <div class="Header_Page">
+    <div class="title_top">
+      <img class="logo_rikkei" src="https://rikkei.edu.vn/wp-content/uploads/2024/01/logo-rikkei2.png" alt="rikkeiedu">
+
+      <b class="title_underlogo">Để nông dân biết Code</b>
+
+      <div class="title_mid">
+        <h1>HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI
+        </h1>
+      </div>
+      <!-- Thêm nút đăng xuất ra màn hình đăng nhập -->
+      <div class="title_bot">
+        <span class="user_box"></span>
+        <button class="logout" onclick="logout()">Log Out</button>
+
+        <script>
+          //       //   Hàm đăng xuất 
+          //       function logout() {
+          //         // // Xoá thông tin đăng nhập
+          //         localStorage.removeItem("userList")
+          //         //  Chuyển hướng đến trang đăng nhập
+          //         window.location.href = "NewUser/index.html"
+          //       }
+          //       //Xin Chào Người Dùng
+          //       let userLogin = JSON.parse(localStorage.getItem("userLogin"))
+
+
+
+          //       function renderHeader() {
+          //         document.querySelector(".user_box").innerHTML = `
+          // Hello , ${userLogin.userName}
+          // `
+          //       }
+          //       renderHeader()
+
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="container">
+    <div class="menu_bar">
+    <table>
+      <tr>
+        <td>
+          <img class="anh1"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.pngtree.com%2Ffreepng%2Fmanagement-vector-icon_3710720.html&psig=AOvVaw278nksSZdyH0uT7uu4OtgM&ust=1719396030032000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD3zb6_9oYDFQAAAAAdAAAAABAE"
+            alt="">
+        </td>
+        <td>
+          <a href="#" onclick="showDashboard()">Bảng điều khiển</a>
+        </td>
+      </tr>
+      <tr>
+        <td><img class="anh1"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.pngtree.com%2Ffreepng%2Fmanagement-vector-icon_3710720.html&psig=AOvVaw278nksSZdyH0uT7uu4OtgM&ust=1719396030032000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD3zb6_9oYDFQAAAAAdAAAAABAE"
+            alt="">
+        </td>
+        <td><a href="#" onclick="showCourseManagement()">Quản lý khoá học</a></td>
+      </tr>
+
+
+    </table>
+  </div> -->
+  <!-- <div class="content_box"> -->
+  <!-- Nội dung tương ứng với mỗi liên kết -->
+  <!-- <div id="dashboard" style="display: none;">
+      <table>
+
+      </table>
+
+    </div>
+
+    <div id="courseManagement" style="display: none;">
+      <h2>Quản lý khoá học</h2>
+      <table>
+        <thead>
+
+        </thead>
+        <tbody> -->
+  <!-- Danh sách các khoá học -->
+  <!-- </tbody>
+      </table>
+    </div>
+  </div>
+    <script> -->
+  <!-- // Hàm hiển thị bảng điều khiển
+      function showDashboard() {
+        document.getElementById('dashboard').style.display = 'block';
+        document.getElementById('courseManagement').style.display = 'none';
+      }
+
+      // Hàm hiển thị quản lý khoá học
+      function showCourseManagement() {
+        document.getElementById('dashboard').style.display = 'none';
+        document.getElementById('courseManagement').style.display = 'block';
+      }
+
+      //Hàm hiển thị quản lý lớp học
+      function showClassManagement() {
+        document.get
+      }
+    </script>
+
+
+  </div> -->
+  <div class="container1">
+    <div class="cardS">
+      <div class="card" style="width: 18rem; background-color:white;">
+        <img
+          src="data:image/jpeg;base64,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"
+          class="card-img-top" alt="...">
+        <div class="card-body" style="padding: 10px 0;">
+
+          <button onclick="thongKe()" style="border-radius: 1px solid #dcdcdc;
+    box-shadow: 1px 6px 11px 1px #bcbebc; ; border-radius: 5px; border: 1px; width: 130px;height: 20px;">
+            Trang Thống Kê
+          </button>
+          <h5 class="card-title" style="padding: 5px;">
+
+            <span>Thống kê Khoá học</span> <br>
+            <span> Thống kê Lớp Học</span> <br>
+            <span> Thống kê Sinh viên</span> <br>
+
+          </h5>
+
+          <script>
+            //   Hàm Trang thống kê
+            function thongKe() {
+              // // Đưa tới trang thống kê
+              //  Chuyển hướng đến trang thống kê
+              window.location.href = "ThongKe/index.html"
+            }
+
+
+          </script>
+        </div>
+      </div>
+
+      <div class="card2" style="width: 18rem; background-color:white;">
+        <img src="https://img.lovepik.com/photo/40006/7778.jpg_wh860.jpg" class="card-img-top" alt="...">
+        <div class="card-body2" style="padding: 10px 0;">
+
+          <button onclick="qlKhoahoc()" style="border-radius: 1px solid #dcdcdc;
+    box-shadow: 1px 6px 11px 1px #bcbebc; ; border-radius: 5px; border: 1px; width: 130px;height: 20px;">
+            Quản Lý Khoá Học
+          </button>
+          <h5 class="card-title" style="padding: 5px;">
+
+            <span>Thêm Khoá học </span> <br>
+            <span> Xoá Khoá học </span> <br>
+
+
+          </h5>
+
+          <script>
+            //   Hàm Trang quản lý khoá học
+            function qlKhoahoc() {
+              // // Đưa tới Trang quản lý khoá học
+              //  Chuyển hướng đến Trang quản lý khoá học
+              window.location.href = "qlKhoahoc/index.html"
+            }
+
+
+          </script>
+        </div>
+      </div>
+
+
+      <!-- // Trang quản lý lớp học -->
+      <div class="card3" style="width: 18rem; background-color:white;">
+        <img src="https://blog.koolsoftelearning.com/wp-content/uploads/2020/11/xay-du%CC%A3ng-lo%CC%81p-ho%CC%A3c.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body2" style="padding: 10px 0;">
+
+          <button onclick="qlLophoc()" style="border-radius: 1px solid #dcdcdc;
+box-shadow: 1px 6px 11px 1px #bcbebc; ; border-radius: 5px; border: 1px; width: 130px;height: 20px;">
+            Quản Lý Lớp học
+          </button>
+          <h5 class="card-title" style="padding: 5px;">
+
+            <span>Thêm Lớp học </span> <br>
+            <span> Xoá Lớp học </span> <br>
+
+
+          </h5>
+
+          <script>
+            //   Hàm Trang quản lý lớp học
+            function qlLophoc() {
+              // // Đưa tới Trang quản lý lớp học
+              //  Chuyển hướng đến Trang quản lý lớp học
+              window.location.href = "qlLopHoc/index.html"
+            }
+
+
+          </script>
+        </div>
+      </div>
+
+      <!-- Trang quản lý sinh viên -->
+      <div class="card4" style="width: 18rem; background-color:white;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlChSVepVwON5pcIYJ1ivLOs3y4H53dlBSKQ&s"
+          class="card-img-top" alt="...">
+        <div class="card-body2" style="padding: 10px 0;">
+
+          <button onclick="qlSinhVien()" style="border-radius: 1px solid #dcdcdc;
+box-shadow: 1px 6px 11px 1px #bcbebc; ; border-radius: 5px; border: 1px; width: 130px;height: 20px;">
+            Quản Lý Sinh Viên
+          </button>
+          <h5 class="card-title" style="padding: 5px;">
+
+            <span>Thêm Sinh Viên </span> <br>
+            <span> Xoá Sinh Viên </span> <br>
+
+
+          </h5>
+
+          <script>
+            //   Hàm Trang quản lý Sinh Viên
+            function qlSinhVien() {
+              // // Đưa tới Trang quản lý Sinh Viên
+              //  Chuyển hướng đến Trang quản lý Sinh Viên
+              window.location.href = "qlSinhVien/index.html"
+            }
+
+
+          </script>
+        </div>
+      </div>
+
+      <!-- Trang quản Lý tài khoản -->
+      <div class="card5" style="width: 18rem; background-color:white;">
+        <img src="https://websitechuan.com/public/manipulate/1200x630/article-images/1473223841-hinh-dai-dien-3-1.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body2" style="padding: 10px 0;">
+
+          <button onclick="qlTaiKhoan()" style="border-radius: 1px solid #dcdcdc;
+box-shadow: 1px 6px 11px 1px #bcbebc; ; border-radius: 5px; border: 1px; width: 130px;height: 20px;">
+            Quản Lý Tài Khoản
+          </button>
+          <h5 class="card-title" style="padding: 5px;">
+
+            <span>Tìm kiếm Tài Khoản </span> <br>
+            <span> Xoá Tài khoản </span> <br>
+
+
+          </h5>
+
+          <script>
+            //   Hàm Trang quản lý tài khoản
+            function qlTaiKhoan() {
+              // // Đưa tới Trang quản lý tài khoản
+              //  Chuyển hướng đến Trang quản lý tài khoản
+              window.location.href = "qlTaiKhoan/index.html"
+            }
+
+
+          </script>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
