@@ -28,18 +28,27 @@ Header của trang -->
                 <span class="user_box"></span>
                 <button class="logout" onclick="logout()">Log Out</button>
 
-
+                <button class="home" onclick="goHome()">Home</button>
             </div>
         </div>
     </div>
     <div>
         <table class="table table-striped">
+            <div class="btn">
+                <button onclick="addUser()" type="button" class="btn btn-success">Thêm người dùng
+                </button>
+                <button onclick="searchData()" type="button" class="btn btn-success">Tìm Kiếm</button>
+                <input class=" searchData" type="text" placeholder="Tìm kiếm">
+
+            </div>
+            <h3>Quản Lý Tài Khoản</h3>
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Account</th>
+                    <th scope="col">User Name</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Tools</th>
+                    <th scope="col">Edit</th>
                 </tr>
             </thead>
             <tbody id="user_box">

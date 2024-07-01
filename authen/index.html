@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="authen.css">
 
     <script>
+        if (!localStorage.getItem("userList")) {
+            localStorage.setItem("userList", JSON.stringify([]));
+        }
+
         function checkAuthen() {
             if (localStorage.getItem("userLogin")) {
-                alert(" Bạn Đã Dăng Nhập Thành Công ")
-                window.location.href = "/"
-
+                alert("Bạn Đã Đăng Nhập Thành Công");
+                window.location.href = "/";
             }
         }
-        checkAuthen()
+        checkAuthen();
     </script>
 
 </head>

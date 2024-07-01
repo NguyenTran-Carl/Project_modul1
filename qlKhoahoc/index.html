@@ -30,6 +30,43 @@
 
 <body>
     <div class="container">
+        <h1>Quản Lý Khoá Học</h1>
+        <form id="courseForm" class="course">
+            <div class="course">
+                <label for="courseID" class="ID">ID Course:</label>
+                <input type="text" class="Name" id="courseID" name="courseID" required>
+            </div>
+            <div class="course">
+                <label for="courseName" class="ID">Course:</label>
+                <input type="text" class="Name" id="courseName" name="courseName" required>
+            </div>
+            <div class="course">
+                <label for="courseTime" class="ID">Time:</label>
+                <input type="text" class="Name" id="courseTime" name="courseTime" required>
+            </div>
+            <button type="button" class="btn btn-success" onclick="addCourse()">Add</button>
+        </form>
+        <div class="course">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+            <button class="btn btn-primary" onclick="searchCourses()">Search</button>
+        <table id="courseTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID Course</th>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+
+
+<!-- <div class="container">
 
         <button style="background-color: white;  border-radius: 5px;">
             <a href="#" onclick="addCourse()">Add Course</a>
@@ -41,49 +78,50 @@
 
 
 
-    </div>
+// Code Lỗi
 
-    <div id="dashboard" style="display: none;">
-        
-        <table class="addTable">
-            
-                <legend>Please, enter your IDCourse, Course and Time confirmation for resigter</legend>
+    </div> -->
+<!-- <div class="content_box">
+        <h3>Product Management</h3>
+        <form>
+            <input type="text" id="searchProduct" placeholder="Product Name">
+            <button class="btn btn-success" onclick="search()">Search</button>
+            <select value="arrange">
+                <option name="arrange">Arrange</option>
+                <option name="arrange_by_name" id="arrange_by_name">Arrange by name</option>
+                <option name="arrange_by_quantity" id="arrange_by_quantity">Arrange by quantity</option>
+                <option name="arrange_by_category" id="arrange_by_category">Arrange by category</option>
+            </select>
+            <button class="btn btn-success" onclick="arrange()">Arrange</button>
+            <br> -->
 
-                <span> <label for="IDCourse">New ID Course</label></span>
-                <input name="Course" id="IDCourse" type="text" required>
+<!-- <div id="content_box"> -->
+<!-- <div id="showTable">
+            <h3> Course Management</h3>
+            <form>
+                <form id="addCourse">
+                    <b>Add new Course</b><br>
+                    <span> <label for="IDCourse">New ID Course</label></span>
+                    <input name="Course" id="IDCourse" type="text" placeholder="IDCourse">
+                    <span> <label for="IDCourse">New ID Course</label></span>
+                    <input name="Course" id="IDCourse" type="text" required>
 
 
-                <span> <label for="newCourse">New Course</label></span>
-                <input name="password" id="newCourse" type="text" required>
+                    <span> <label for="newCourse">New Course</label></span>
+                    <input name="password" id="newCourse" type="text" required>
 
 
-                <span> <label for="time">Time</time></label></span>
-                <input name="time" id="time" type="number" required>
+                    <span> <label for="time">Time</time></label></span>
+                    <input name="time" id="time" type="number" required>
 
-          
-            <button type="submit" onclick="renderAddCourse()">Update</button>
-            <button type="submit">Close</button>
-        </table>
-    
-    </div>
+                    <button onclick="renderAddCourse()" class="btn-success">Add</button>
+
+                </form>
+            </form> -->
 
 
-    <div id="showTable" style="display: none;">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col"> ID Course</th>
-                    <th scope="col">Cousre</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-              
-            </tbody>
-        </table>
-    </div>
+
+
 </body>
 <link rel="stylesheet" href="main.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"

@@ -18,12 +18,13 @@ let userLogin = JSON.parse(localStorage.getItem("userLogin"))
  //   Hàm đăng xuất 
  function logout() {
     // // Xoá thông tin đăng nhập
-    localStorage.removeItem("userList")
+    localStorage.removeItem("userLogin")
     //  Chuyển hướng đến trang đăng nhập
-    window.location.href = "NewUser/index.html"
+    window.location.href = "authen/index.html"
   }
   //Xin Chào Người Dùng
 
+ 
 
 
 
